@@ -31,7 +31,6 @@ jobs:
           distribution: goreleaser
           version: latest
           args: release --clean
-          workdir: libvirtd_exporter
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       -
@@ -39,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: libvirtd_exporter
-          path: libvirtd_exporter/dist/*
+          path: dist/*
